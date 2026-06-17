@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalali - House Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Dalali - Find Your Perfect Home</h1>
+            <p>Search and filter properties based on your criteria</p>
+        </header>
+
+        <main>
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <h2>Filter Properties</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range</label>
+                        <select id="priceFilter">
+                            <option value="all">All Prices</option>
+                            <option value="0-100000">$0 - $100,000</option>
+                            <option value="100000-300000">$100,000 - $300,000</option>
+                            <option value="300000-500000">$300,000 - $500,000</option>
+                            <option value="500000-1000000">$500,000 - $1,000,000</option>
+                            <option value="1000000+">$1,000,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="bedroomsFilter">Bedrooms</label>
+                        <select id="bedroomsFilter">
+                            <option value="all">All</option>
+                            <option value="1">1 Bedroom</option>
+                            <option value="2">2 Bedrooms</option>
+                            <option value="3">3 Bedrooms</option>
+                            <option value="4">4 Bedrooms</option>
+                            <option value="5+">5+ Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="bathroomsFilter">Bathrooms</label>
+                        <select id="bathroomsFilter">
+                            <option value="all">All</option>
+                            <option value="1">1 Bathroom</option>
+                            <option value="2">2 Bathrooms</option>
+                            <option value="3">3 Bathrooms</option>
+                            <option value="4+">4+ Bathrooms</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="propertyTypeFilter">Property Type</label>
+                        <select id="propertyTypeFilter">
+                            <option value="all">All Types</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="townhouse">Townhouse</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="areaFilter">Area/Location</label>
+                        <select id="areaFilter">
+                            <option value="all">All Areas</option>
+                            <option value="downtown">Downtown</option>
+                            <option value="suburbs">Suburbs</option>
+                            <option value="waterfront">Waterfront</option>
+                            <option value="rural">Rural</option>
+                        </select>
+                    </div>
+
+                    <button id="resetFilters" class="reset-btn">Reset Filters</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <h2>Available Properties (<span id="resultsCount">0</span>)</h2>
+                <div id="propertiesContainer" class="properties-grid">
+                    <!-- Properties will be loaded here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Dalali. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
